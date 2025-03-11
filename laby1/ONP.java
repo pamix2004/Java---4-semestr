@@ -242,9 +242,16 @@ public class ONP {
 
     public static void main(String[] args) {
         //Pierwiastkowanie zapisujemy w taki sposób że pierwiastek z 36 to 36s lub (36)s
-        String infixEquation = " (22+3)/(2-34)*3+8)= ";
-        ONP onp = new ONP();
-        String rownanieOnp = onp.przeksztalcNaOnp(infixEquation);
-        System.out.println(onp.obliczOnp(rownanieOnp));
+        try {
+            String infixEquation = " (22+3)/(2-34)*3+8)= ";
+            ONP onp = new ONP();
+            String rownanieOnp = onp.przeksztalcNaOnp(infixEquation);
+            System.out.println(onp.obliczOnp(rownanieOnp));
+        }
+        catch(RuntimeException e)//łapanie wsztskiego naraz bo czemu nie
+        {
+            System.err.print("BŁĄD: " + e.getMessage());
+            System.exit(1);
+        }
     }
 }
