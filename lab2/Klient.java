@@ -19,12 +19,19 @@ public class Klient implements Serializable {
         this.miejsca = miejsca;
     }
 
-    public void updateMiejsca(HashMap<Character, ArrayList<Integer>> nowe_miejsca) {
-        miejsca = nowe_miejsca;
-    }
+    public String getNazwisko(){return nazwisko;}
+    public String getImie(){return imie;}
+    public String getMail(){return mail;}
+    public int getTelefon(){return telefon;}
+    public Seans getSeans(){return seans;}
+    public HashMap<Character, ArrayList<Integer>> getMiejsca(){return miejsca;}
 
     public boolean zarezerwujMiejsca() {
         return seans.rezerwujMiejsca(miejsca);
+    }
+
+    public void updateMiejsca(HashMap<Character, ArrayList<Integer>> nowe_miejsca) {
+        miejsca = nowe_miejsca;
     }
 
     @Override
@@ -36,7 +43,7 @@ public class Klient implements Serializable {
         try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filename))) {
             oos.writeObject(klient);
         } catch (IOException e) {
-            System.err.println(e.getMessage());
+            System.err.println("BŁĄD: " + e.getMessage());
         }
     }
 
