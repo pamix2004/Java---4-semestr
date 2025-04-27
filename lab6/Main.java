@@ -10,7 +10,7 @@ public class Main {
         try {
 
             int lines = countLines(filePath);
-            ExecutorService taskExecutor = Executors.newCachedThreadPool(); //nielimitowana liczba wątków dla obliczenia i zapisu równań
+            ExecutorService taskExecutor = Executors.newFixedThreadPool(lines); //liczba wątków dla obliczenia i zapisu równań
 
             for (int i=0; i<lines; i++) {
                 //tworzenie nowego wątku do zczytania linii tekstu
@@ -52,6 +52,6 @@ public class Main {
         }
 
         reader.close();
-        return lineCount; // Zwracamy liczbę linii
+        return lineCount;
     }
 }
