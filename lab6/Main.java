@@ -1,8 +1,6 @@
 import java.util.concurrent.*;
 import java.util.concurrent.locks.ReentrantLock;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,9 +8,8 @@ public class Main {
         ReentrantLock lock = new ReentrantLock();
 
         try {
-            List<String> equations = readEquationsFromFile(filePath);
-            int lines = equations.size(); //liczba linii w pliku - 1 linia 2 thready
-            List<Thread> threads = new ArrayList<>();
+
+            int lines = countLines(filePath);
             ExecutorService taskExecutor = Executors.newCachedThreadPool(); //nielimitowana liczba wątków dla obliczenia i zapisu równań
 
             for (int i=0; i<lines; i++) {
@@ -44,17 +41,17 @@ public class Main {
         }
     }
 
-    //funkcja zczytująca plik - drastycznie upraszcza zapisywanie zmian jesli po prostu nadpiszemy cały plik
-    private static List<String> readEquationsFromFile(String filePath) throws IOException {
-        List<String> equations = new ArrayList<>();
+    // Funkcja zliczająca liczby linii w pliku
+    private static int countLines(String filePath) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(filePath));
-        String line;
-        while ((line = reader.readLine()) != null) {
-            if (!line.trim().isEmpty()) {
-                equations.add(line.trim());
-            }
+        int lineCount = 0;
+
+        // Liczymy liczbę linii w pliku
+        while ((reader.readLine()) != null) {
+            lineCount++;
         }
+
         reader.close();
-        return equations;
+        return lineCount; // Zwracamy liczbę linii
     }
 }
