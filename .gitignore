@@ -1,3 +1,0 @@
-# Ignore everything from folder except .java files
-lab4-01.04.2025/*
-!lab4-01.04.2025/*.java
