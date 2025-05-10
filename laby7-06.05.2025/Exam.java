@@ -63,6 +63,7 @@ public class Exam {
         //stores the correct answer to the questions
         private char correctAnswer=' ';
 
+
         //Question is in format
         /**
          *
@@ -79,6 +80,14 @@ public class Exam {
             answerList[2] = parts[3];
             answerList[3] = parts[4];
             correctAnswer  = parts[5].charAt(0);
+        }
+
+        /**
+         * Function that returns if the given answer is correct answer to the question
+         * @param answer answer given by user
+         * **/
+        public boolean checkAnswer(char answer){
+            return answer==correctAnswer;
         }
 
         /**
@@ -107,6 +116,10 @@ public class Exam {
 
         public int getId() {
             return id;
+        }
+
+        public String getTaskInstruction() {
+            return taskInstruction;
         }
     }
 }

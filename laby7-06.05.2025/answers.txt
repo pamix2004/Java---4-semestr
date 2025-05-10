@@ -1,0 +1,35 @@
+pawel michon,student1: 
+Jaki jest stolicą Francji?;a;Correct
+Które zwierzę jest ssakiem?;b;Correct
+Który pierwiastek ma symbol 'O'?;c;Correct
+Ile to 3 * 3?;a;Incorrect
+Jakiego koloru jest marchewka?;c;Correct
+-------
+pamix,aha1: 
+Jaki jest stolicą Francji?;a;Correct
+Które zwierzę jest ssakiem?;a;Incorrect
+Który pierwiastek ma symbol 'O'?;b;Incorrect
+Ile to 3 * 3?;c;Incorrect
+Jakiego koloru jest marchewka?;null;null
+-------
+a,f: 
+Jaki jest stolicą Francji?;a;Correct
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+Joanna,Senyszyn134: 
+Jaki jest stolicą Francji?;a;Correct
+Które zwierzę jest ssakiem?;b;Correct
+Który pierwiastek ma symbol 'O'?;a;Incorrect
+Ile to 3 * 3?;-;User didn't answer
+Jakiego koloru jest marchewka?;c;Correct
+-------
+Maciej Maciak,Ruskiagent1234: 
+Jaki jest stolicą Francji?;a;Correct
+Które zwierzę jest ssakiem?;-;User didn't answer
+Który pierwiastek ma symbol 'O'?;c;Correct
+Ile to 3 * 3?;a;Incorrect
+Jakiego koloru jest marchewka?;c;Correct
+-------

@@ -1,0 +1,5 @@
+pawel michon,student1, score: 4
+pamix,aha1, score: 1
+a,f, score: 1
+Joanna,Senyszyn134, score: 3
+Maciej Maciak,Ruskiagent1234, score: 3

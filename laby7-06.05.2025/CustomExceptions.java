@@ -7,3 +7,9 @@ class InvalidLineInTextFile extends RuntimeException {
         super(message);
     }
 }
+
+class invalidUserInput extends RuntimeException{
+   public invalidUserInput(String message){
+       super(message);
+   }
+}
