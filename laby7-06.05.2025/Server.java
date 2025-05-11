@@ -1,18 +1,16 @@
 import java.io.*;
-import java.net.InetAddress;
-import java.net.ServerSocket;
-import java.net.Socket;
-import java.net.SocketTimeoutException;
+import java.net.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class Server {
     private String serverDataFile;
-    private String serverIPAdress;
+    private InetAddress serverIPAdress;
     private int serverPort;
     private ServerSocket serverSocket;
-    private Map<Integer,ClientHandler>listOfClients;
+    private ArrayList<Thread> listOfClients;
     private int numberOfQuestions;
     private Exam exam;
     private final int timeForQuestionInMilliseconds = 10000;
@@ -23,7 +21,7 @@ public class Server {
 
     public Server(String serverDataFile) throws FileNotFoundException {
         this.serverDataFile = serverDataFile;
-        this.listOfClients = new HashMap<Integer,ClientHandler>();
+        this.listOfClients = new ArrayList<Thread>(0);
         this.exam = new Exam("exam1.txt");
         this.pathToFileWithStudentsAnswers="answers.txt";
 
@@ -31,20 +29,41 @@ public class Server {
     }
 
     public void startServer() throws IOException {
-        this.serverSocket = new ServerSocket(this.serverPort, 0, InetAddress.ofLiteral(this.serverIPAdress));
-
+        this.serverSocket = new ServerSocket(this.serverPort, 0, this.serverIPAdress);
+        int clientId = 0; //counter for numbering clients (using list.size()) would cause issues with numbering after 250th)
+        boolean counterMessage = false; //so that too many clients message is shown once
         while(true){
 
-
-        Socket clientSocket = serverSocket.accept();
-        ClientHandler clientHandler = new ClientHandler(clientSocket,listOfClients.size());
-        Thread thread = new Thread(clientHandler);
-        thread.start();
-        System.out.println("Dolaczyl klient "+listOfClients.size());
-        listOfClients.put(listOfClients.size(),clientHandler);
+        //if we don't have 250 clients we can add more
+        if(listOfClients.size()<250) {
+            counterMessage=false;
+            Socket clientSocket = serverSocket.accept();
+            ClientHandler clientHandler = new ClientHandler(clientSocket, clientId);
+            Thread thread = new Thread(clientHandler);
+            thread.start();
+            System.out.println("Dolaczyl klient " + clientId);
+            //we look for an empty spot in our array
+            listOfClients.add(thread);
+            clientId++;
+        }
+        else{
+            if(counterMessage==false) {
+                System.out.println("client limit reached!");
+                counterMessage=true;
+            }
+        }
+        //when server is full, or someone new is added it checks for threads that are done and we can delete, freeing up space for new clients
+        for(int i=0; i<listOfClients.size(); i++)
+        {
+            if(!listOfClients.get(i).isAlive())
+            {
+                listOfClients.remove(i);
+            }
         }
 
         }
+
+    }
 
         
      /**
@@ -53,7 +72,7 @@ public class Server {
     public void readServerConfig(){
         try(BufferedReader br = new BufferedReader(new FileReader(this.serverDataFile))) {
 
-            this.serverIPAdress = br.readLine();
+            this.serverIPAdress = InetAddress.getLocalHost();
             System.out.println(this.serverIPAdress);
 
             String serverPortString = br.readLine();
@@ -76,7 +95,7 @@ public class Server {
         private int id;
         //Current question that is being asked
         private int currentQuestion = 0;
-        //We want to store informatio about client/student we handle
+        //We want to store information about client/student we handle
         private String studentName;
         private String studentID;
         //PrintWriter is used for sending messages via sockets
@@ -85,6 +104,7 @@ public class Server {
         private  String clientRepresentation;
         //Self-explanatory
         private int score = 0;
+
 
         /*It stores answers that user entered e.g
         { {1:a},{2:c} } which means that user answered 'a' for 1st question and 'c' for 2nd question
@@ -124,7 +144,7 @@ public class Server {
         private String waitForMessage() throws IOException {
             BufferedReader in = new BufferedReader(new InputStreamReader(this.socket.getInputStream()));
             String line;
-            while ((line = in.readLine()) != null) {
+            if ((line = in.readLine()) != null) {
                 return line;
             }
             return "";
@@ -134,18 +154,7 @@ public class Server {
          * It saves answers of a client in a file in format of (question;given_answer;correct/incorrect)
          * **/
         private void saveAnswersInFile() throws IOException {
-            try (PrintWriter pw = new PrintWriter(new FileWriter(pathToFileWithStudentsAnswers,true))) {
-                pw.println(studentName + "," + studentID+": ");
-
-                for(int i = 0;i<numberOfQuestions;i++){
-                    String task = exam.getQuestion(i).getTaskInstruction();
-                    pw.println(task+";"+givenAnswer.get(i)+";"+wasAnswerCorrect.get(i));
-                }
-                pw.println("-------");
-            }
-            catch (Exception e){
-                System.out.println("Exception when saving answers to file");
-            }
+            SaveAnswers.saveAnswersInFile(pathToFileWithStudentsAnswers, studentName, studentID, numberOfQuestions, exam, givenAnswer, wasAnswerCorrect);
         }
 
 
@@ -153,21 +162,27 @@ public class Server {
          * It saves only scores of clients
          * **/
         private void saveScore() throws IOException {
-            try (PrintWriter pw = new PrintWriter(new FileWriter(pathToScores,true))) {
-                pw.println(studentName + "," + studentID+", score: "+score);
-            }
-
+            SaveAnswers.saveScore(pathToScores, studentName, studentID, score);
         }
 
 
         /**
          * It handles the input sent by client. It decides if given input was a correct answer or not.
          * **/
-        private void handleUserInput(String userInput,Exam.Question question) throws invalidUserInput{
+        private void handleUserInput(String userInput,Exam.Question question, AtomicBoolean wantsToQuit) throws invalidUserInput{
+            char character = '-';
             if (userInput.length()>1)
-                throw new invalidUserInput("User input is too long, it's expected to be single character");
+                character = '-'; //worked better than exception below
+                // throw new invalidUserInput("User input is too long, it's expected to be single character");
 
-            char character = userInput.charAt(0);
+
+            try {
+                character = userInput.charAt(0);
+            } catch (StringIndexOutOfBoundsException e)
+            {
+                character = '-';
+            }
+
 
             switch (character){
                 case 'a':
@@ -187,7 +202,8 @@ public class Server {
                     break;
                     //It happens if user wants to quit
                 case 'q':
-                    System.out.println("User wants to stop writing an exam");
+                    //System.out.println("User wants to stop writing an exam");
+                    wantsToQuit.set(true);
                     break;
             }
 
@@ -210,20 +226,44 @@ public class Server {
                 sendMessage(String.valueOf(timeForQuestionInMilliseconds));
 
 
-                clientRepresentation =  this.studentName +" "+ this.studentID;
+                clientRepresentation = this.studentName + " " + this.studentID;
 
-
-
-            } catch (IOException e) {
+            }catch (SocketException e)
+            {
+                System.out.println("client abruptly disconnected");
+                return;
+            }
+             catch (IOException e) {
                 throw new RuntimeException(e);
             }
-
+            AtomicBoolean wantsToQuit = new AtomicBoolean(false);
             Exam.Question question=null;
+
+            //if exam is ended prematurely the values are not null because of this
+            for(int i = 0; i< exam.getNumberOfQuestions(); i++)
+            {
+                question = exam.getQuestion(i);
+                givenAnswer.put(question.getId(),'-');
+                wasAnswerCorrect.put(question.getId(),"User didn't answer");
+            }
+            //used to fix questions not appearing
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                System.out.println("Thread control sleep was interrupted!");
+            }
             for(int i = 0;i<exam.getNumberOfQuestions();i++){
                 try {
+                    //an information that a question will be sent so it can print the give answer thing
+                    sendMessage("q");
+                    //client needs time to comprehend the q, no answer message breaks without it for some godforsaken reason
+                    //makes the thing overall stabler
+                    Thread.sleep(50);
                     //Get the question and send it to the client so they can display the question and all of the answers
                     question = exam.getQuestion(i);
                     sendMessage(String.valueOf(question));
+
+
 
                     //System.out.println("I sent question to " +clientRepresentation);
 
@@ -232,30 +272,54 @@ public class Server {
 
                     //Wait for the answer, if socket receives an answer go the next iteration of for loop
                     String client_input = waitForMessage();
+
                     //System.out.println(clientRepresentation+" sent an answer: "+client_input);
 
 
-                    handleUserInput(client_input, question);
+                    handleUserInput(client_input, question, wantsToQuit);
+                    //exam is ended if client wants to quit
+                    if(wantsToQuit.get())
+                    {
+                        break;
+                    }
                 }
                 //It happens when user doesn't answer the question within the time
                 catch (SocketTimeoutException e){
-                    givenAnswer.put(question.getId(),'-');
-                    wasAnswerCorrect.put(question.getId(),"User didn't answer");
+                        sendMessage("Time for question is up!");
                 }
 
+                catch (SocketException e)
+                {
+                    System.out.println("client abruptly disconnected");
+                    return;
+                }
                 //Exception for overal purposes
                 catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+
+
+                catch(InterruptedException e)
+                {
                     throw new RuntimeException(e);
                 }
             }
 
             System.out.println(clientRepresentation+" has ended exam with score of: "+score);
+            sendMessage("The test has ended");
+            sendMessage("Your score is: " + score);
+
+
             try {
+                socket.close(); //closing socket since test has finished
                 saveAnswersInFile();
                 saveScore();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+
+
         }
     }
 

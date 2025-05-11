@@ -33,3 +33,416 @@ Który pierwiastek ma symbol 'O'?;c;Correct
 Ile to 3 * 3?;a;Incorrect
 Jakiego koloru jest marchewka?;c;Correct
 -------
+Amogus,69: 
+Jaki jest stolicą Francji?;-;User didn't answer
+Które zwierzę jest ssakiem?;b;Correct
+Który pierwiastek ma symbol 'O'?;c;Correct
+Ile to 3 * 3?;d;Correct
+Jakiego koloru jest marchewka?;c;Correct
+-------
+muk,22: 
+Jaki jest stolicą Francji?;-;User didn't answer
+Które zwierzę jest ssakiem?;-;User didn't answer
+Który pierwiastek ma symbol 'O'?;-;User didn't answer
+Ile to 3 * 3?;-;User didn't answer
+Jakiego koloru jest marchewka?;-;User didn't answer
+-------
+ss,2: 
+Jaki jest stolicą Francji?;-;User didn't answer
+Które zwierzę jest ssakiem?;-;User didn't answer
+Który pierwiastek ma symbol 'O'?;-;User didn't answer
+Ile to 3 * 3?;-;User didn't answer
+Jakiego koloru jest marchewka?;-;User didn't answer
+-------
+aa,44: 
+Jaki jest stolicą Francji?;a;Correct
+Które zwierzę jest ssakiem?;d;Incorrect
+Który pierwiastek ma symbol 'O'?;b;Incorrect
+Ile to 3 * 3?;a;Incorrect
+Jakiego koloru jest marchewka?;c;Correct
+-------
+amogus,22: 
+Jaki jest stolicą Francji?;-;User didn't answer
+Które zwierzę jest ssakiem?;a;Incorrect
+Który pierwiastek ma symbol 'O'?;-;User didn't answer
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;c;Correct
+-------
+sus,33: 
+Jaki jest stolicą Francji?;a;Correct
+Które zwierzę jest ssakiem?;a;Incorrect
+Który pierwiastek ma symbol 'O'?;a;Incorrect
+Ile to 3 * 3?;a;Incorrect
+Jakiego koloru jest marchewka?;a;Incorrect
+-------
+ss,33: 
+Jaki jest stolicą Francji?;-;User didn't answer
+Które zwierzę jest ssakiem?;b;Correct
+Który pierwiastek ma symbol 'O'?;a;Incorrect
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;c;Correct
+-------
+muk,gugug: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+sussus,amogus: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+s,5: 
+Jaki jest stolicą Francji?;-;User didn't answer
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+muk,22: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+muk,22: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+sus,2222: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+sus,222: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+ss,2: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+muk,666: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+k,44: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+ss,23: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+323,ss: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+ss,45: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+22,2222: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+susus,222: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+sussus,22: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+dssfda,3456: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+sadadadfdf,444: 
+Jaki jest stolicą Francji?;a;Correct
+Które zwierzę jest ssakiem?;b;Correct
+Który pierwiastek ma symbol 'O'?;b;Incorrect
+Ile to 3 * 3?;d;Correct
+Jakiego koloru jest marchewka?;c;Correct
+-------
+sdafafaf,234567: 
+Jaki jest stolicą Francji?;a;Correct
+Które zwierzę jest ssakiem?;b;Correct
+Który pierwiastek ma symbol 'O'?;c;Correct
+Ile to 3 * 3?;d;Correct
+Jakiego koloru jest marchewka?;c;Correct
+-------
+sdfghnf,325463: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+ssuss,2345: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;a;Incorrect
+Który pierwiastek ma symbol 'O'?;b;Incorrect
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+nfsd,8765: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+dsfgf,defdg: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+sdfg,sdfg: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+sad,sad: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+sdfg,sadf: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+sdfg,sdf: 
+Jaki jest stolicą Francji?;d;Incorrect
+Które zwierzę jest ssakiem?;a;Incorrect
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;c;Incorrect
+Jakiego koloru jest marchewka?;null;null
+-------
+kjh,ccv: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+zx,zxcv: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+z,sdf: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+dfcv,asdf: 
+Jaki jest stolicą Francji?;a;Correct
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;d;Incorrect
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+null,null: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+null,null: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;d;Correct
+Jakiego koloru jest marchewka?;c;Correct
+-------
+kk,jhg: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------
+,: 
+Jaki jest stolicą Francji?;null;null
+Które zwierzę jest ssakiem?;null;null
+Który pierwiastek ma symbol 'O'?;null;null
+Ile to 3 * 3?;null;null
+Jakiego koloru jest marchewka?;null;null
+-------

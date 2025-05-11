@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 
 public class Client {
     private Socket socket;
-    private boolean userHasAnswered = false;
+    private boolean printGiveAnswer = false;
     private int numberOfClientHandlers = 0;
     private Scanner scanner = new Scanner(System.in);
     private String studentName;
@@ -20,7 +20,7 @@ public class Client {
 
 
 
-        this.socket = new Socket("10.10.10.124",50001);
+        this.socket = new Socket("192.168.0.100",50001);
         this.out = new PrintWriter(socket.getOutputStream());
 
         String line;
@@ -42,6 +42,7 @@ public class Client {
 
         line = waitForMessage();
         this.timeForQuestionInMilliseconds = Integer.parseInt(line);
+        System.out.println("Exam can be quit with q");
         System.out.println("You have "+timeForQuestionInMilliseconds/1000+" seconds for each question!!!!!");
 
 
@@ -80,7 +81,7 @@ public class Client {
 
         //It will be useful for reading from console
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-
+        printGiveAnswer = false;
 
         //Listen for messages all the time
         while (true) {
@@ -88,16 +89,26 @@ public class Client {
             try{
                 //If we receive new message from server, load new question
             if (input.available() > 0) {
-                userHasAnswered = false;
                 //Read received data
                 byte[] buffer = new byte[input.available()];
                 int bytesRead = input.read(buffer);
                 //Received refers to the message that it receives from server, it is probably the question and answers
                 String received = new String(buffer, 0, bytesRead);
 
-                //Display received message
-                System.out.println(received);
-                System.out.print("Give your answer: ");
+                //used to determine if next passed value is question
+                if(received.trim().trim().equals("q"))
+                {
+                    printGiveAnswer = true;
+                }
+                else {
+                    //Display received message
+                    System.out.println(received.trim());
+                    if(printGiveAnswer) {
+                        System.out.print("Give your answer: ");
+                    }
+                    printGiveAnswer = false;
+
+                }
 
                 //For each input we create a new thread that is responsible for taking an input.
                 //We do it on different thread because of blocking nature of console input
