@@ -1,5 +1,0 @@
-Jaki jest stolicą Francji?;Paryż;Berlin;Rzym;Madryt;a
-Które zwierzę jest ssakiem?;Rekin;Delfin;Tuna;Żaba;b
-Który pierwiastek ma symbol 'O'?;Złoto;Sód;Tlen;Wodór;c
-Ile to 3 * 3?;6;7;8;9;d
-Jakiego koloru jest marchewka?;Zielona;Czerwona;Pomarańczowa;Niebieska;c

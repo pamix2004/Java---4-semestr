@@ -15,15 +15,15 @@ public class Server {
     private Exam exam;
     private final int timeForQuestionInMilliseconds = 10000;
     private String pathToFileWithStudentsAnswers;
-    private String pathToScores = "scores.txt";
+    private String pathToScores = "wyniki.txt";
 
 
 
     public Server(String serverDataFile) throws FileNotFoundException {
         this.serverDataFile = serverDataFile;
         this.listOfClients = new ArrayList<Thread>(0);
-        this.exam = new Exam("exam1.txt");
-        this.pathToFileWithStudentsAnswers="answers.txt";
+        this.exam = new Exam("bazaPytan.txt");
+        this.pathToFileWithStudentsAnswers="bazaOdpowiedzi.txt";
 
         this.numberOfQuestions = exam.getNumberOfQuestions();
     }
