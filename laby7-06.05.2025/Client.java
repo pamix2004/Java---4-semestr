@@ -20,7 +20,7 @@ public class Client {
 
 
 
-        this.socket = new Socket("192.168.0.100",50001);
+        this.socket = new Socket("172.31.240.1",50001);
         this.out = new PrintWriter(socket.getOutputStream());
 
         String line;
@@ -112,10 +112,12 @@ public class Client {
 
                 //For each input we create a new thread that is responsible for taking an input.
                 //We do it on different thread because of blocking nature of console input
-                ClientInputListener clientInputListener = new ClientInputListener(numberOfClientHandlers,br);
-                numberOfClientHandlers++;
-                Thread thread = new Thread(clientInputListener);
-                thread.start();
+                if(printGiveAnswer == true) { //question will be sent so we need to read it
+                    ClientInputListener clientInputListener = new ClientInputListener(numberOfClientHandlers, br);
+                    numberOfClientHandlers++;
+                    Thread thread = new Thread(clientInputListener);
+                    thread.start();
+                }
 
 
 
