@@ -1,2 +1,0 @@
-test,1, score: 3
-maciej,69, score: 1
